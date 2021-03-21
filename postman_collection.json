@@ -1,0 +1,180 @@
+{
+  "info": {
+    "_postman_id": "61b35858-b265-494e-b019-e0377c4352bc",
+    "name": "WeRush test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"john\",\n    \"password\": \"secure\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:81/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "81",
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"john@example.com\",\n    \"password\": \"secure\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:81/logout",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "81",
+          "path": [
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:81/user",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "81",
+          "path": [
+            "user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "username",
+              "value": "newuser",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "newuser@example.com",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "pass",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:81/user",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "81",
+          "path": [
+            "user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "new@example.com",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "newusername",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:81/user/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "81",
+          "path": [
+            "user",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:81/user/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "81",
+          "path": [
+            "user",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
